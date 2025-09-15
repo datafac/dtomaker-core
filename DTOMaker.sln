@@ -9,7 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
 		projscan.json = projscan.json
 		README.md = README.md
-		t2g.cmd = t2g.cmd
 		version.json = version.json
 	EndProjectSection
 EndProject
@@ -20,20 +19,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOMaker.Models", "DTOMaker.Models\DTOMaker.Models.csproj", "{ADC41325-68E6-487F-85C9-1A8F54F3FA28}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOMaker.Runtime", "DTOMaker.Runtime\DTOMaker.Runtime.csproj", "{662CCA28-84A6-4990-85FA-35B243AC4D8A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MessagePack", "MessagePack", "{438D7A56-02BF-40E0-8780-1B24471425E2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOMaker.MessagePack", "DTOMaker.MessagePack\DTOMaker.MessagePack.csproj", "{49579A6F-590A-4890-B152-2E0187EA3B06}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOMaker.MessagePack.Tests", "DTOMaker.MessagePack.Tests\DTOMaker.MessagePack.Tests.csproj", "{DD6C7AD4-0CC7-43C0-981F-177922CC0C26}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOMaker.Models.MessagePack", "DTOMaker.Models.MessagePack\DTOMaker.Models.MessagePack.csproj", "{D87B9BC9-7B4F-4590-B803-7734A5D7C793}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOMaker.Runtime.MessagePack", "DTOMaker.Runtime.MessagePack\DTOMaker.Runtime.MessagePack.csproj", "{B094DFEC-896E-4860-B823-1032557E87FD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.MessagePack", "Template.MessagePack\Template.MessagePack.csproj", "{E41D94B3-092F-4385-87D2-E88D2D48525A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.MessagePack.Tests", "Template.MessagePack.Tests\Template.MessagePack.Tests.csproj", "{7C84EB0F-1C88-45CA-9ACB-44F2A68F0901}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MemBlocks", "MemBlocks", "{D2511C4B-C5B9-4DD4-B535-816A3056181E}"
 EndProject
@@ -54,10 +39,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{EA84EF56-0D96-4A7A-9D2C-083AE6C49B62}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DTOMaker.Core.Shared", "DTOMaker.Core.Shared\DTOMaker.Core.Shared.shproj", "{AF5E10B1-3CB5-4C67-87C2-E8E8918CE3CD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Sandbox\Sandbox.csproj", "{5B1DC408-7BD0-4C01-9CFC-80C71DC72467}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Tests", "Sandbox.Tests\Sandbox.Tests.csproj", "{80AAE055-6B4B-42E4-B9A2-C80B84898EDB}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DTOMaker.MemBlocks.Shared", "DTOMaker.MemBlocks.Shared\DTOMaker.MemBlocks.Shared.shproj", "{4AE6A305-935C-4344-A5A7-0554A2CCCFD4}"
 EndProject
@@ -87,30 +68,6 @@ Global
 		{662CCA28-84A6-4990-85FA-35B243AC4D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{662CCA28-84A6-4990-85FA-35B243AC4D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{662CCA28-84A6-4990-85FA-35B243AC4D8A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{49579A6F-590A-4890-B152-2E0187EA3B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49579A6F-590A-4890-B152-2E0187EA3B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49579A6F-590A-4890-B152-2E0187EA3B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49579A6F-590A-4890-B152-2E0187EA3B06}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD6C7AD4-0CC7-43C0-981F-177922CC0C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD6C7AD4-0CC7-43C0-981F-177922CC0C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD6C7AD4-0CC7-43C0-981F-177922CC0C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD6C7AD4-0CC7-43C0-981F-177922CC0C26}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D87B9BC9-7B4F-4590-B803-7734A5D7C793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D87B9BC9-7B4F-4590-B803-7734A5D7C793}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D87B9BC9-7B4F-4590-B803-7734A5D7C793}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D87B9BC9-7B4F-4590-B803-7734A5D7C793}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B094DFEC-896E-4860-B823-1032557E87FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B094DFEC-896E-4860-B823-1032557E87FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B094DFEC-896E-4860-B823-1032557E87FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B094DFEC-896E-4860-B823-1032557E87FD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E41D94B3-092F-4385-87D2-E88D2D48525A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E41D94B3-092F-4385-87D2-E88D2D48525A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E41D94B3-092F-4385-87D2-E88D2D48525A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E41D94B3-092F-4385-87D2-E88D2D48525A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7C84EB0F-1C88-45CA-9ACB-44F2A68F0901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C84EB0F-1C88-45CA-9ACB-44F2A68F0901}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C84EB0F-1C88-45CA-9ACB-44F2A68F0901}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C84EB0F-1C88-45CA-9ACB-44F2A68F0901}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EC33243A-F088-4091-8212-D9C88A5427C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EC33243A-F088-4091-8212-D9C88A5427C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC33243A-F088-4091-8212-D9C88A5427C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -139,14 +96,6 @@ Global
 		{3D7F7027-D043-4EFD-A7E6-573DDDB4779B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D7F7027-D043-4EFD-A7E6-573DDDB4779B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D7F7027-D043-4EFD-A7E6-573DDDB4779B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5B1DC408-7BD0-4C01-9CFC-80C71DC72467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B1DC408-7BD0-4C01-9CFC-80C71DC72467}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B1DC408-7BD0-4C01-9CFC-80C71DC72467}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B1DC408-7BD0-4C01-9CFC-80C71DC72467}.Release|Any CPU.Build.0 = Release|Any CPU
-		{80AAE055-6B4B-42E4-B9A2-C80B84898EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{80AAE055-6B4B-42E4-B9A2-C80B84898EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{80AAE055-6B4B-42E4-B9A2-C80B84898EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{80AAE055-6B4B-42E4-B9A2-C80B84898EDB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FE740A1F-CF62-4ECB-B896-AC1169D27127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FE740A1F-CF62-4ECB-B896-AC1169D27127}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE740A1F-CF62-4ECB-B896-AC1169D27127}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -162,12 +111,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{ADC41325-68E6-487F-85C9-1A8F54F3FA28} = {EA84EF56-0D96-4A7A-9D2C-083AE6C49B62}
 		{662CCA28-84A6-4990-85FA-35B243AC4D8A} = {EA84EF56-0D96-4A7A-9D2C-083AE6C49B62}
-		{49579A6F-590A-4890-B152-2E0187EA3B06} = {438D7A56-02BF-40E0-8780-1B24471425E2}
-		{DD6C7AD4-0CC7-43C0-981F-177922CC0C26} = {438D7A56-02BF-40E0-8780-1B24471425E2}
-		{D87B9BC9-7B4F-4590-B803-7734A5D7C793} = {438D7A56-02BF-40E0-8780-1B24471425E2}
-		{B094DFEC-896E-4860-B823-1032557E87FD} = {438D7A56-02BF-40E0-8780-1B24471425E2}
-		{E41D94B3-092F-4385-87D2-E88D2D48525A} = {438D7A56-02BF-40E0-8780-1B24471425E2}
-		{7C84EB0F-1C88-45CA-9ACB-44F2A68F0901} = {438D7A56-02BF-40E0-8780-1B24471425E2}
 		{EC33243A-F088-4091-8212-D9C88A5427C6} = {D2511C4B-C5B9-4DD4-B535-816A3056181E}
 		{929EA3E5-041B-4E5D-93FE-90EC0C26F259} = {D2511C4B-C5B9-4DD4-B535-816A3056181E}
 		{212174D6-311F-4EC6-A87B-E55E332DAAC3} = {D2511C4B-C5B9-4DD4-B535-816A3056181E}
@@ -183,7 +126,6 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		DTOMaker.MemBlocks.Shared\DTOMaker.MemBlocks.Shared.projitems*{021bff51-3d0f-4cbb-97b7-78942317f1d8}*SharedItemsImports = 5
 		DTOMaker.MemBlocks.Shared\DTOMaker.MemBlocks.Shared.projitems*{212174d6-311f-4ec6-a87b-e55e332daac3}*SharedItemsImports = 5
-		DTOMaker.Core.Shared\DTOMaker.Core.Shared.projitems*{49579a6f-590a-4890-b152-2e0187ea3b06}*SharedItemsImports = 5
 		DTOMaker.MemBlocks.Shared\DTOMaker.MemBlocks.Shared.projitems*{4ae6a305-935c-4344-a5a7-0554a2cccfd4}*SharedItemsImports = 13
 		DTOMaker.Core.Shared\DTOMaker.Core.Shared.projitems*{af5e10b1-3cb5-4c67-87c2-e8e8918ce3cd}*SharedItemsImports = 13
 		DTOMaker.Core.Shared\DTOMaker.Core.Shared.projitems*{ec33243a-f088-4091-8212-d9c88a5427c6}*SharedItemsImports = 5
