@@ -10,33 +10,19 @@
 
 A collection of model-driven compile-time source generators for quickly creating DTOs (Data Transport Objects) supporting the following
 serialization schemes:
+- JSON (System.Text)
 - JSON (NewtonSoft)
 - MessagePack
 - MemBlocks
 
 and related types.
 
-<!--TOC-->
-- [DTOMaker](#dtomaker)
-  - [Workflow](#workflow)
-- [Included Packages](#included-packages)
-  - [DTOMaker.Models](#dtomaker.models)
-  - [DTOMaker.JsonNewtonSoft](#dtomaker.jsonnewtonsoft)
-  - [DTOMaker.MessagePack](#dtomaker.messagepack)
-  - [DTOMaker.Models.MessagePack](#dtomaker.models.messagepack)
-  - [DTOMaker.MemBlocks](#dtomaker.memblocks)
-  - [DTOMaker.Models.MemBlocks](#dtomaker.models.memblocks)
-  - [DTOMaker.CSPoco](#dtomaker.cspoco)
-  - [DTOMaker.Runtime](#dtomaker.runtime)
-- [Model features](#model-features)
-  - [MemBlocks features](#memblocks-features)
-- [!Limitations](#limitations)
-  - [Single compilation unit](#single-compilation-unit)
-- [Development](#development)
-  - [In progress](#in-progress)
-  - [Coming soon](#coming-soon)
-  - [Coming later](#coming-later)
-<!--/TOC-->
+## Related repos
+- dtomaker-poco-cs
+- dtomaker-nsjson-cs
+- dtomaker-msgpack-cs
+- dtomaker-memblocks-cs
+- dtomaker-stjson-cs (coming soon)
 
 ## Workflow
 ```mermaid
@@ -83,6 +69,10 @@ This repo includes the following packages:
 
 ## DTOMaker.Models
 Attributes for defining simple data models as interfaces in C#.
+
+## DTOMaker.SrcGen.JsonSystemText
+A source generator that creates DTOs (Data Transport Objects) that are serializable to JSON 
+using the System.Text.Json package.
 
 ## DTOMaker.JsonNewtonSoft
 A source generator that creates DTOs (Data Transport Objects) that are serializable to JSON 
