@@ -1,5 +1,6 @@
 ﻿using System;
 using System.CommandLine;
+using System.CommandLine.Parsing;
 using System.IO;
 using System.Text;
 using System.Threading;
@@ -12,43 +13,51 @@ namespace DTOMaker.CLI
         static async Task<int> Main(string[] args)
         {
             var t2gCommand = new Command("t2g", "Builds generators from templates");
-            var template = new Option<FileInfo>(["--source", "-s"])
+            var template = new Option<FileInfo>("--source", "-s")
             {
-                IsRequired = true,
+                Required = true,
                 Description = "The source template file to consume",
             };
-            t2gCommand.AddOption(template);
+            t2gCommand.Add(template);
 
-            var generator = new Option<FileInfo>(["--output", "-o"])
+            var generator = new Option<FileInfo>("--output", "-o")
             {
-                IsRequired = true,
+                Required = true,
                 Description = "The output generator file to produce",
             };
-            t2gCommand.AddOption(generator);
+            t2gCommand.Add(generator);
 
-            var targetNamespace = new Option<string>(["--namespace", "-n"])
+            var targetNamespace = new Option<string>("--namespace", "-n")
             {
-                IsRequired = true,
+                DefaultValueFactory = (x) => "Generated",
                 Description = "The output namespace of the generator",
             };
-            t2gCommand.AddOption(targetNamespace);
+            t2gCommand.Add(targetNamespace);
 
-            var language = new Option<string>(["--language", "-l"], () => "cs")
+            var language = new Option<string>("--language", "-l")
             {
-                //IsRequired = true,
+                DefaultValueFactory = (x) => "cs",
                 Description = "The target language file extension",
             };
-            t2gCommand.AddOption(language);
+            t2gCommand.Add(language);
 
-            t2gCommand.SetHandler<FileInfo, FileInfo, string, string>(T2GHandler, template, generator, targetNamespace, language);
+            t2gCommand.SetAction((pr) => T2GHandler(
+                    pr.GetRequiredValue<FileInfo>(template),
+                    pr.GetRequiredValue<FileInfo>(generator),
+                    pr.GetRequiredValue<string>(targetNamespace),
+                    pr.GetRequiredValue<string>(language))
+            );
 
             var rootCommand = new RootCommand("dtomaker")
             {
                 t2gCommand
             };
-
             rootCommand.TreatUnmatchedTokensAsErrors = true;
-            return await rootCommand.InvokeAsync(args);
+
+            ParseResult parseResult = rootCommand.Parse(args);
+
+            return await parseResult.InvokeAsync();
+
         }
 
         private static async Task<int> T2GHandler(FileInfo source, FileInfo output, string targetNamespace, string languageExtn)
