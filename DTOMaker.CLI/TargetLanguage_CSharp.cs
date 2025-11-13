@@ -15,13 +15,10 @@
             public sealed class EntityGenerator : EntityGeneratorBase
             {
                 public EntityGenerator(ILanguage language) : base(language) { }
-                protected override void OnGenerate(ModelScopeEntity entity)
-                {
             """;
 
         private static readonly string _footer =
             """
-                }
             }
             """;
 
