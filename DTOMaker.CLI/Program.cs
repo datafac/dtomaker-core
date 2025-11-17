@@ -78,7 +78,6 @@ namespace DTOMaker.CLI
 
                 using var fs = output.Create();
                 using var sw = new StreamWriter(fs);
-                await sw.WriteLineAsync(language.EmitFileHeader.Replace("_targetNamespace_", targetNamespace));
                 int lineNumber = 0;
                 await foreach (var inputLine in File.ReadLinesAsync(source.FullName, CancellationToken.None))
                 {
@@ -86,7 +85,6 @@ namespace DTOMaker.CLI
                     string outputLine = T2GConvertLine(inputLine, language);
                     await sw.WriteLineAsync(outputLine);
                 }
-                await sw.WriteLineAsync(language.EmitFileFooter);
                 Console.WriteLine($"T2G: Generator created ({lineNumber} lines)");
                 return 0;
             }

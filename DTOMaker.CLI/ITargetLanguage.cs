@@ -7,7 +7,5 @@
         string PrefixMetaCode { get; }
         string EmitCodePrefix { get; }
         string EmitCodeSuffix { get; }
-        string EmitFileHeader { get; }
-        string EmitFileFooter { get; }
     }
 }
