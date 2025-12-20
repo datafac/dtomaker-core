@@ -2,9 +2,9 @@
 
 [![Build-Deploy](https://github.com/datafac/dtomaker-core/actions/workflows/dotnet.yml/badge.svg)](https://github.com/datafac/dtomaker-core/actions/workflows/dotnet.yml)
 [![CodeQL](https://github.com/datafac/dtomaker-core/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/datafac/dtomaker-core/actions/workflows/github-code-scanning/codeql)
-![NuGet Version](https://img.shields.io/nuget/v/DTOMaker.Models)
-![NuGet Downloads](https://img.shields.io/nuget/dt/DTOMaker.Models)
 ![GitHub License](https://img.shields.io/github/license/Datafac/dtomaker-core)
+
+*Deprecated: Projects have moved to https://github.com/datafac/dtomaker-all *
 
 *Warning: This is pre-release software under active development. Breaking changes may occur.*
 
